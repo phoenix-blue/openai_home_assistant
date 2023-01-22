@@ -1,0 +1,20 @@
+alias: Dryer ready
+description: ""
+trigger:
+  - type: value
+    platform: device
+    device_id: 72a3d333b891fe010d34a24f54010f9e
+    entity_id: sensor.dryer_power
+    domain: sensor
+    below: 5
+    for:
+      hours: 0
+      minutes: 5
+      seconds: 0
+condition: []
+action:
+  - service: mqtt.publish
+    data:
+      payload: The dryer is ready
+      topic: openai/status
+mode: single
