@@ -1,0 +1,11 @@
+alias: Telegram output
+description: ""
+trigger:
+  - platform: mqtt
+    topic: openai/output
+condition: []
+action:
+  - service: telegram_bot.send_message
+    data:
+      message: "{{ trigger.payload }}"
+mode: single
