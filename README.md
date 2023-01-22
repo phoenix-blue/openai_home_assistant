@@ -1,4 +1,4 @@
-<hx>openai_home_assistant</hx>
+<b>openai_home_assistant</b>
 This project uses the OpenAI API to generate text based on the status of a home appliance, such as a washing machine or a dryer. The generated text is then sent to a Telegram chat using the MQTT protocol.
 
 <b>Getting Started</b>
